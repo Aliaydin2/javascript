@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let price = 111;
+      let stringPrice = "111";
+      let hasPassword = true;
+      // typeof kullanımı
+      console.log("price:", typeof price); //price: number
+      console.log("stringPrice:", typeof stringPrice); //stringPrice: string
+      console.log("hasPassword:", typeof hasPassword); //hasPassword: boolean
+
+      //Number() Sadece sayı olan metni(string) sayısal ifadeye(number) çevirir.
+      //parseInt()    Sadece sayı ile başlayan string'in tamsayı kısmını sayısal ifadeye çevirir.
+      //parseFloat() Sadece  sayı ile başlayan string'in sayı kısmını ondalık kısmıyla sayısal ifadeye çevirir.
+      //toString()  Sayısal ifadeyi metinsel ifadeye çevirir.
+
+      let number1 = "11"; //Number ve parseFloat ile de olur
+      number1 = parseInt(number1);
+      console.log("number1:", number1, typeof number1); //number1: 11 number
+
+      let number2 = "11px"; //"px11px" gibi numarasız başlarsa -Nan(not a number)- dönüşü olur. //parse ler numara ile başlamalı, yoksa algılamaz!
+      number2 = parseInt(number2);
+      console.log("number2:", number2, typeof number2); //number2: 11 number
+
+      let number3 = "11.1"; //parseInt() ile olsa idi dönüşü 11 olurdu.
+      number3 = Number(number3);
+      console.log("number3:", number3, typeof number3); //number3: 11 number
+
+      let number4 = "11.4px";
+      number4 = parseFloat(number4);
+      console.log("number4:", number4, typeof number4); //number4: 11 number
+
+      let number5 = 55;
+      number5 = number5.toString();
+      console.log("number5:", number5, typeof number5); //number5: 55 string
+    </script>
+  </body>
+</html>
