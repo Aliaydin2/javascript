@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>String İfadelerle İşlemler</h1>
+    <h4>length - Uzunluk Değerini Alma</h4>
+    <h4>indexOf() - Metin İçinde Arama Yapma</h4>
+    <h4>lastIndexOf()- Metin İçinde Arama Yapma, sonuncuyu verir.</h4>
+    <h4>search() - Metin İçinde Arama Yapma</h4>
+    <h4>
+      slice( , ) - Metninden Parça Almak, son terimi dahil etmez, son terim
+      yazilmazsa başlangiçtan bitene kadar hepsini alir.
+    </h4>
+    <h4>replace() - Metin Bulma ve Değiştirme</h4>
+    <h4>toUpperCase() - Harfleri Büyük Yazar</h4>
+    <h4>toLowerCase() - Harfleri Küçük Yazar</h4>
+    <h4>concat() - Metine Ekleme Yapma</h4>
+    <h4>charAt()- İndex Numarasina Göre Karakter Bulmak</h4>
+    <h4>
+      charCodeAt() - İndex Numarasina Göre Karakterin Unicode Değerini Bulma
+    </h4>
+    <h4>split() - Metni Diziye Çevirme</h4>
+    <h4>Ilk harfi büyük diğerlerini küçük yapma işlemi</h4>
+    <h4>terimler 0. dan başlar.</h4>
+    <br />
+    <h4>includes - bir bilginin var olup olmadiği sorulur, true ya da false döner</h4>
+    <h4>startWith - bu bilgiyle başladi mi? sorulur, true ya da false döner</h4>
+    <h4>endsWith - bu bilgiyle mi sonlandi? sorulur, true ya da false döner</h4>
+
+    <script>
+      let isim = "Ali Aydin";
+
+      console.log(isim.length); //9
+      console.log(isim.indexOf("Ay")); //4 //search() ile ayni sonuçlar elde edilir.
+      console.log(isim.indexOf("AY")); //-1       -1 cevabi "AY" yok demektir
+      console.log(isim.lastIndexOf("A")); //4
+      console.log(isim.search("Ay")); //4      //indexOf() ile ayni sonuçlar elde edilir. Genel olarak "Regular Expressions" işlemleri için çok kullanilan bir metottur.
+      console.log(isim.slice(6, 8)); //di       //son terimi dahil etmiyor.
+      console.log(isim.slice(6)); //din     //sinir vermediğimiz için sonuna kadar aldi.
+      console.log(isim.replace("Aydin", "Ali")); // Ali Ali
+      console.log(isim.toUpperCase(isim)); //ALI AYDIN
+      console.log(isim.toLowerCase(isim)); //ali aydin
+      console.log(isim.concat(" ", 34));
+      console.log(isim.charAt(2)); //i
+      console.log(isim.charCodeAt(2)); //105 - unicode değeri
+      console.log(isim.split(" ")); //(2) ['Ali', 'Aydin']      //Boşluklara göre ayirdik.
+
+      isim = `${isim[0].toUpperCase()}${isim.slice(1).toLowerCase()}`;
+      console.log(isim); //Ali aydin     //ilk harfi büyük , diğerlerini küçük yapma
+
+      // email değişkeninde sadece domaini almak istesek bunu iki farkli yöntemle yapabiliriz;
+      let email = "aliaydin@kodluyoruz.org";
+
+      //    let domain = email.slice(email.search("@")+1);       //1. YÖNTEM
+      //     console.log(domain); //"kodluyoruz.org"
+
+      let domain = email.slice(email.indexOf("@") + 1); //2. YÖNTEM
+      console.log(domain); //"kodluyoruz.org"
+
+      console.log(email);
+      console.log(email.includes("@")); //true
+      console.log(email.includes("$")); //false
+      console.log(email.startsWith("@")); //false
+      console.log(email.endsWith("org")); //true
+    </script>
+  </body>
+</html>
