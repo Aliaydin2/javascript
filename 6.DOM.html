@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="ali">DOM Document Object Model</h1>
+    <h3>getElement <span style="color: red">*s*</span> ById()</h3>
+    <h3>[Not: "s" harfini kirmizi yazmami sağlayan tag < span>] :)</h3>
+    <h3>getElementsByTagName()</h3>
+    <h3>getElementsByClassName()</h3>
+    <h3>getElementsByName()</h3>
+    <h3>querySelector()</h3>
+    <h3>querySelectorAll()___________Tüm hepsini seçer.</h3>
+    <h3>
+      querySelector(.class)_________class bilgisi: önünde "." ile girilir.
+    </h3>
+    <h3>querySelector(#id)__________id bilgisi: önünde "#" ile girilir.</h3>
+    <h3>innerHTML______________elementin içeriğini bize verir</h3>
+    <h3>innerHTML+= ___________elementin içeriğine ekleme yapmamizi sağlar</h3>
+    <script>
+      let getid = document.getElementById("ali");
+      console.log(getid.innerHTML);
+      getid.innerHTML += " - Ali";
+      console.log(getid);
+
+      let queryid = document.querySelector("#ali");
+      console.log(queryid.innerHTML);
+      queryid.innerHTML += " AYDIN";
+      console.log(queryid.innerHTML);
+    </script>
+  </body>
+</html>
