@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list">
+      <!--  id si "list" olan Ul içerisinde 3 adet li olsun içerisi lorem1 dolsun -->
+      <li>Lorem.</li>
+      <li>Mollitia.</li>
+      <li>Dolorem?</li>
+    </ul>
+    <script>
+      //listenin ilk ögesini degistirmek
+      let firstChild = document.querySelector("#list>li:first-Child");
+      firstChild.innerHTML = "ilk öge degisti";
+
+      //listenin son ögesini degistirmek
+      let lastChild = document.querySelector("#list>li:last-Child");
+      lastChild.innerHTML = "son öge degisti";
+
+      //listenin başına ve sonuna öge eklemek
+      let ulDOM = document.querySelector("#list");
+      let liDOM = document.createElement("li");
+
+      liDOM.innerHTML = "Kendi olusturdugumuz öge";
+      //ulDOM.prepend(liDOM);  //listenin basina öge ekler
+
+      ulDOM.append(liDOM); //listenin sonuna öge ekler. Aynı öge tek yerde olur.Hem basina hem sonuna eklenemiyor.
+    </script>
+  </body>
+</html>
