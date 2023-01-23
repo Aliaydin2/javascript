@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="yazi">prompt() KULLANIMI</h1>
+    <h2>
+      prompt() ilkel bir yöntem olup artik kullanicidan < form> tagi ile bilgi
+      alinmaktadir.
+    </h2>
+    <!--prompt("prompt açıklamasi","text(input)yazisi") -->
+    <script>
+      //Amacımız prompt ile kullanıcıdan alınacak bilginin h1 tag inin içeriğinde değişiklik ile yanına yazdırmak.
+      let fullname = prompt("Lütfen Ad Soyad Giriniz", "max 33 karakter");
+      let yazi = document.querySelector("#yazi"); //h1 tag'indeki yaziyi değişken atıyoruz.
+      yazi.innerHTML = `${yazi.innerHTML} <small style="color:blue">${fullname}<small/> `;
+    </script>   <!--Burada da fullname i small tag i ile ekledik ve style atayabildik.-->
+  </body>
+</html>
