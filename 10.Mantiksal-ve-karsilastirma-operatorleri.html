@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let price = "100";
+      let user = "Ali AYDIN";
+
+      //     ==     Esitse
+      console.log("== : ", price == 1); // false
+      console.log("== : ", price == 100); //true
+
+      //     ===    Hem degeri hem türü esitse
+      console.log("=== : ", price === 1); //false
+      console.log("=== : ", price === 100); //;false
+
+      //     !=     Esit degilse
+      console.log("!=  :", user != "guest"); //true
+
+      //     <      Kücükse
+      console.log("price<100 :", price < 100); //false
+
+      //     <=     Kücük veya esitse
+      console.log("price<=100 :", price <= 100); //true
+
+      //     >      Büyükse
+      console.log("price>200 :", price > 200); //false
+
+      //     >=     Büyük veya esitse
+      console.log("price>=100 :", price >= 100); //true
+
+      //     &&     ve
+      price = 0;
+      console.log(price > 0 && user != "guest"); //false
+
+      //     ||     veya
+      console.log(price > 0 || user != "guest"); //true
+
+      //     !      Degilse (tersi)
+      console.log(price > 0 || !user == "guest"); //false
+    </script>
+  </body>
+</html>
