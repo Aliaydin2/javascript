@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="info"></h1>
+    <script>
+      let username = prompt("Adinizi giriniz");
+      let yas = prompt("Yasinizi giriniz");
+      let info = document.querySelector("#info");
+
+      if (username && yas >= 18) {
+        info.innerHTML = "Ehliyet alabilirsiniz.";
+      } else if (!username) {
+        info.innerHTML = "Kullanici adiniz yok.";
+      } else if (!(yas >= 18)) {
+        info.innerHTML = "Yas bilgisi girilmedi ya da 18 yasindan kücüksünüz..";
+      }
+
+      //    Eğer switch ifadesine verilmiş değer herhangi bir case etiketi ile eşleşmezse default (geçerli) etiketine geçilecek ve ilgili deyimler çalışacaktır. Koşulu sağlayan bir case etiketinin deyimleri çalıştıktan sonra program akışında break ifadesiyle karşılaşana kadar diğer case etiketlerinin deyimleri de çalışacaktır.
+    //  Gunesli case etiketi için önce konsola "Hafif giyin" yazdırıldı. Ardından break ifadesi ile karşılaşılmadığı için sonraki Bulutlu etiketine geçildi ve konsola "Disari cik" yazdırıldı.
+      let hava = "Gunesli";
+      switch (hava) {
+        case "Yagmurlu":
+          console.log("Semsiyeni yanina almayi unutma");
+          break;
+        case "Gunesli":
+          console.log("Hafif giyin");
+            //break;
+        case "Bulutlu":
+          console.log("Disari cik");
+          break;
+        case "Karlı":
+          console.log("Kalin giyin");
+          break;
+        case "Firtinali":
+          console.log("Bir süre disari cikma");
+          break;
+        default:
+          console.log("Bilinmeyen hava durumu:", hava);
+      }
+    </script>
+  </body>
+</html>
