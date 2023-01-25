@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-danger {
+        color: red;
+      }
+      .text-primary {
+        color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="info"></h1>
+    <script>
+
+      const smile=`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+           <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+          </svg>`
+      const sad=`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi               bi-emoji-frown-fill" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-2.715 5.933a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+          </svg>`
+
+          let N=prompt("Notunuzu Giriniz","0-100")
+          let info=document.querySelector("#info")
+
+        if (90<=N && N<=100){info.innerHTML="AA"}
+        else if (85<=N && N<=89){info.innerHTML="BA"}
+        else if (80<=N && N<=84){info.innerHTML="BB"}
+        else if (75<=N && N<=79){info.innerHTML="CB"}
+        else if (70<=N && N<=74){info.innerHTML="CC"}
+        else if (65<=N && N<=69){info.innerHTML="DC"}
+        else if (60<=N && N<=64){info.innerHTML="DD"}
+        else if (50<=N && N<=59){info.innerHTML="FD"}
+        else if (0<=N && N<=49){info.innerHTML="FF"}
+        else {info.innerHTML="Not Bilgisi Girilmedi ya da Yanlis Girildi!"}
+
+        if (info.innerHTML=="FF") {info.classList.add("text-danger")} else {  info.classList.add("text-primary") }
+        if (info.innerHTML=="FF") {info.innerHTML+=sad} else {info.innerHTML+=smile}
+    </script>
+  </body>
+</html>
