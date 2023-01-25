@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="info"></h1>
+    <script>
+      let username = prompt("Kullanici Adinizi Giriniz");
+      let info = document.querySelector("#info");
+      //console.log(username.length>0 ? username : "Kullanici Adiniz Bulunamadi");
+      //console.log(username ? username : "Kullanici Adiniz Bulunamadi");       BU 
+      //Username true ise username yaz, değilse Kullanici Adi Bulunamadi yaz demektir. İki kullanımda aynıdır. 2. sinde Boolean ifade şeklinde kullanılmıştır.
+
+      info.innerHTML = `${username ? username : "Kullanici Adiniz Bulunamadi"}`;
+    </script>
+  </body>
+</html>
