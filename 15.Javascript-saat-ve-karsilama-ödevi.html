@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    /> -->
 
     <style>
       body {
@@ -52,26 +46,20 @@
       console.log(year); //2023
 
       function tarihSaat() {
+        const date = new Date();
+        const time = date.toLocaleTimeString();
         document.querySelector("#zaman").innerHTML = time;
       }
-      // her 1 saniyede tarihSaat fonksiyonunu yeniden çalıştır
-      setInterval(tarihSaat, 1000);
 
-        //     function myStopFunction() {
-        // clearInterval(tarihSaat);
+      setInterval(tarihSaat, 1000); // her 1 saniyede tarihSaat fonksiyonunu yeniden çalıştır
 
-                    // javascript setInterval fonksiyonu , milisaniye cinsinden tanımlanan süreyle belirli aralıkta tanımlanan fonksiyonu çalıştırmaktadır . Javascript setInterval fonksiyonunu durdurmak için clearInterval() şeklinde çağırmanız gerekmekte. Durdurmak için setInterval fonksiyonunu bir değişkene atamanız gerekmektedir.
+      // function myStopFunction(tarihSaat) {
+      // clearInterval(setInterval(tarihSaat, 1000));}
+      // myStopFunction(tarihSaat)
+   //YAPAMADIM.. DURDURAMIYORUM:)
+     
+
+      // javascript setInterval fonksiyonu , milisaniye cinsinden tanımlanan süreyle belirli aralıkta tanımlanan fonksiyonu çalıştırmaktadır . Javascript setInterval fonksiyonunu durdurmak için clearInterval() şeklinde çağırmanız gerekmekte. Durdurmak için setInterval fonksiyonunu bir değişkene atamanız gerekmektedir.
     </script>
-
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script> -->
   </body>
 </html>
