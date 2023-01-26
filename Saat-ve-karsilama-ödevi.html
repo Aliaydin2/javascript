@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: orangered;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>KODLUYORUZ</h1>
+    <h2 id="info"></h2>
+    <h3 id="zaman"></h3>
+    <h4>
+      tarihinde <strong>Kodlurouz Frontend Web Development Patikasi</strong>nin
+      Javascript Bölümü 1. Ödevindesiniz
+    </h4>
+    <script>
+      let name = prompt("Adinizi Giriniz");
+      let info = document.querySelector("#info");
+      info.innerHTML = `MERHABA, ${name}! Hosgeldin!`;
+
+      const date = new Date();
+      console.log(date);
+
+      const n = date.toDateString();
+      console.log(n);
+
+      const time = date.toLocaleTimeString();
+      console.log(time);
+
+      let day = date.getDate();
+      console.log(day);
+
+      let gunler = [
+        "Pazar",
+        "Pazartesi",
+        "Salı",
+        "Çarşamba",
+        "Perşembe",
+        "Cuma",
+        "Cumartesi",
+      ];
+
+      function tarihSaat() {
+        const date = new Date();
+        const time = date.toLocaleTimeString();
+        document.querySelector("#zaman").innerHTML = `${time} ${
+          gunler[date.getDay()]
+        }`;
+      }
+
+      setInterval(tarihSaat, 1000);
+    </script>
+  </body>
+</html>
