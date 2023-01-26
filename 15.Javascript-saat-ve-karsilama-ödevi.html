@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> -->
+
+    <style>
+      body {
+        background-color: black;
+        color: orangered;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>KODLUYORUZ</h1>
+    <h2 id="info"></h2>
+    <h3 id="zaman"></h3>
+    <h4>
+      tarihinde <strong>Kodlurouz Frontend Web Development Patikasi</strong>nin
+      Javascript Bölümü 1. Ödevindesiniz
+    </h4>
+    <script>
+      let name = prompt("Adinizi Giriniz");
+      let info = document.querySelector("#info");
+      info.innerHTML = `MERHABA, ${name}! Hosgeldin!`;
+
+      const date = new Date();
+      console.log(date); // Thu Jan 26 2023 12:46:42 GMT+0300 (GMT+03:00)
+
+      const n = date.toDateString();
+      console.log(n); // Thu Jan 26 2023
+
+      const time = date.toLocaleTimeString();
+      console.log(time); // 12:54:36 PM
+
+      let day = date.getDate();
+      console.log(day); //26
+
+      let month = date.getMonth() + 1;
+      console.log(month); // 1
+
+      let year = date.getFullYear();
+      console.log(year); //2023
+
+      function tarihSaat() {
+        document.querySelector("#zaman").innerHTML = time;
+      }
+      // her 1 saniyede tarihSaat fonksiyonunu yeniden çalıştır
+      setInterval(tarihSaat, 1000);
+
+        //     function myStopFunction() {
+        // clearInterval(tarihSaat);
+
+                    // javascript setInterval fonksiyonu , milisaniye cinsinden tanımlanan süreyle belirli aralıkta tanımlanan fonksiyonu çalıştırmaktadır . Javascript setInterval fonksiyonunu durdurmak için clearInterval() şeklinde çağırmanız gerekmekte. Durdurmak için setInterval fonksiyonunu bir değişkene atamanız gerekmektedir.
+    </script>
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>
