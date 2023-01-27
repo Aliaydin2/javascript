@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let firstName = "lorem";
+
+      //function greetings(firstName, lastName) //greetings() olarak çalıştırılırsa "undefined" alınıyor.
+      function greetings(firstName = "", lastName = "") {//default parametre alıyor(firstName="" bir default parametre)
+      //function greetings(firstName = "", lastName = "")   ya böyle yazılacak , ya da
+      //console.log(`Merhaba ${firstName ? firstName : ""}`)  => firstName varsa firstname i yaz, yoksa boş yaz. böyle.
+
+        console.log(`Merhaba ${firstName} `);
+        console.log(`Merhaba ${firstName} ${lastName}`);
+      }
+      console.log(firstName); //output= lorem // değişken (let firstName="lorem" den geliyor.) !
+      greetings();  //output=Merhaba
+                    //output=Merhaba    // fonksiyona parametre göndermedik. Fonksiyondaki 2 console.log da Merhaba yazdı.
+      greetings("parametre");   //output=Merhaba parametre
+                                //output=Merhaba parametre    //(parametre) Parametresini verdik ve fonksiyondaki 2 console.log da Merhaba parametre yazdı.
+    </script>
+  </body>
+</html>

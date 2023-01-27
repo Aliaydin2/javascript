@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <script>
+      function greetings2(firstName, lastName) {
+        let info = `Merhaba ${firstName} ${lastName}`;
+        return info;
+      }
+      greetings2("Ad", "Soyad"); //console da gözükmüyor. Ancak aynı fonksiyonu console da yazınca flu şekilde "Merhaba Ad Soyad" yazıyor. Yani bilgi dışarıya gönderilmiş ancak yakalanması gerekiyor.
+      let info = greetings2("Ad", "Soyad");
+      console.log(info); // Merhaba Ad Soyad
+
+      //  fonksiyon içinde  (let info = `Merhaba ${firstName} ${lastName}`;) tanımlı olsa bile let'in kendi fonksiyon bloğunda tanımlı olduğundan, globaldeki (let info = greetings2("Ad", "Soyad");) ile çakışma yaşamadı ve hata vermedi.
+
+      // let info = "Deneme";  //Ancak globalde 2. info yu tanımlarsak (greetings2("Ad", "Soyad")) tanımlı olduğu için 2.si hata verdiriyor.
+
+      //-----------------------------------
+      //Bu örnekte; id ile domObject seçiyoruz ve içerisine istediğimiz info(içeriği) yazdırıyoruz.
+
+      function idWrite(id, info) {
+        let dom = document.querySelector(`#${id}`);
+        dom.innerHTML = info;
+      }
+      let htmlInfo = `<span style="color:red">Color REDDDD<span/>`;
+
+      idWrite("title", htmlInfo);
+    </script>
+  </body>
+</html>
