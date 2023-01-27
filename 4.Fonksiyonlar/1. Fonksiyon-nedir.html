@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Her fonksiyon tek bir işlev yapmalı. Uzun fonksiyonlar daha sonrasında bizlere sorun çıkarabilirler.
+      //Bir fonksiyonun isminin de işlevinin de geriye dönüp bakıldığında anlamlı olması önem arzediyor.
+      //Fonksiyonun dışarıya bağımlılığının az olması da önemlidir.
+
+      function hello() {
+        console.log("Hello");
+        helloWorld();
+      }
+      function helloWorld() {
+        console.log("Hello World");
+      }
+      hello(); // () çalıştır demek.
+
+      
+      function mesajVer(ad, soyad) {
+        alert(`Merhaba ${ad} ${soyad}`);
+      }
+
+      mesajVer(
+        "Arturo",
+        "Kelesoglu",
+        "Mr."
+      ); /* çıktı: Merhaba Arturo Kelesoglu (Bu örnekte parametrelere geçilen argüman sayısı 3'tür(Arturo, Kelesoglu, Mr.). Parametre sayısı ise 2'dir(ad,soyad). Bu yüzden fazlalıklar(Mr.) önemsenmez.*/
+      mesajVer(
+        "Arturo"
+      ); /* çıktı: Merhaba Arturo undefined (Bu örnekte parametrelere geçilen argüman sayısı 1'dir.(Arturo). Parametre sayısı ise 2'dir(ad,soyad). Bu yüzden eksiklikler undefined döner. */
+      mesajVer(); // çıktı Merhaba undefined undefined (Yukarıdaki örnekle aynı mantıktadır.)
+    </script>
+  </body>
+</html>

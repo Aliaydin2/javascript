@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // question fonksiyonunda hobby parametresi atanıyor, eger (hobby) case'i software ise
+        // function (name,type) { console.log(name + " are you interested in " + type + "?");};
+        //fonksiyonu çalışacaktır. 
+        //softwareQuestion ile Question("software") fonksiyonu seçildi yani function (name,type)
+        // softwareQuestion("Cemre", "nodejs"); ile de parametre verildi ve fonksiyon çağırıldı.
+        // ÇIKTISI;
+        // Cemre are you interested in nodejs?
+      function Question(hobby) {
+        switch (hobby) {
+          case "car":
+            return function (name) {
+              console.log(name + " do you have a car ?");
+            };
+            break;
+
+          case "book":
+            return function (name) {
+              console.log(name + " what is your favorite author?");
+            };
+            break;
+
+          case "software":
+            return function (name, type) {
+              console.log(name + " are you interested in " + type + "?");
+            };
+            break;
+
+          default:
+            return function (name) {
+              console.log(name + "  how are you ?");
+            };
+            break;
+        }
+      }
+
+      var softwareQuestion = Question("software");
+      softwareQuestion("Cemre", "nodejs");
+    </script>
+  </body>
+</html>
