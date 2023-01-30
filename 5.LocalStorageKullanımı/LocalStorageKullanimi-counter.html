@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="counter"></h1>
+    <button id="increase">+1</button>
+    <button id="decrease">-1</button>
+    <script>
+      //In function key="counter" and value =counter added. if there is a value in storage (it storaged in string) we changed it into Number type, else initialize with 0 .
+      let counter = localStorage.getItem("counter")
+        ? Number(localStorage.getItem("counter"))
+        : 0;
+
+      let counterDOM = document.querySelector("#counter");
+      let increaseButton = document.querySelector("#increase");
+      let decreaseButton = document.querySelector("#decrease");
+
+      counterDOM.innerHTML = counter;
+
+      increaseButton.addEventListener("click", clickEvent);
+      decreaseButton.addEventListener("click", clickEvent);
+
+      function clickEvent() {
+        if (this.id == "increase" ? (counter += 1) : (counter -= 1))
+          counterDOM.innerHTML = counter;
+        localStorage.setItem("counter", counter); //In function key="counter" and value =counter added.
+      }
+    </script>
+  </body>
+</html>
