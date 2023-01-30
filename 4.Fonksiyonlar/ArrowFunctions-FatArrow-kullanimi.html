@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //ES5 Standart fonksiyon yazımı
+      function hello(firstName) {
+        console.log(`Merhaba ${firstName}`);
+      }
+      hello("Standart function");
+      
+      //Aroow Function-Fat Arrow
+      const hello1 = (firstName) => {
+        console.log(`Merhaba ${firstName}`);
+      };
+      hello("func1");
+
+      //Arrow Function-Fat Arrow tek parametre kullanılıyorsa () parantezi kullanılmayabilir.
+      const hello2 = (firstName) => {
+        console.log(`Merhaba ${firstName}`);
+      };
+      hello("func2");
+
+      //Arrow Function-Fat Arrow tek işlem yapılıyorsa {} parantezi kullanılmayabilir.
+      const hello3 = (firstName) => {
+        console.log(`Merhaba ${firstName}`);
+      };
+      hello("func3");
+    </script>
+  </body>
+</html>
