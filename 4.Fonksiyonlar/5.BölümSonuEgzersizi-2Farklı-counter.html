@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="counter">0</h1>
+    <button id="increase">+1</button>
+    <button id="decrease">-1</button>
+    <script>
+      //   let counter = 0;
+      //   let counterDOM = document.querySelector("#counter");
+
+      //   let increaseButton = document.querySelector("#increase");
+      //   increaseButton.addEventListener("click", increaseFunc);
+
+      //   let decreaseButton = document.querySelector("#decrease");
+      //   decreaseButton.addEventListener("click", decreaseFunc);
+
+      //   counterDOM.innerHTML = counter;
+
+      //   function increaseFunc() {
+      //     counterDOM.innerHTML = counter += 1;
+      //   }
+      //   function decreaseFunc() {
+      //     counterDOM.innerHTML = counter -= 1;
+      //   }
+      //-------------------------------------------------
+      //Burada tek fonksiyon yazılı ve gelenin(tiklanan button'un id si) ne ise ona göre if fonksiyonuyla işlem seçilmiş oldu. Daha güzel olduğunu düşünüyorum...
+
+      let counter = 0;
+      let counterDOM = document.querySelector("#counter");
+
+      let increaseButton = document.querySelector("#increase");
+      increaseButton.addEventListener("click", clickEvent);
+
+      let decreaseButton = document.querySelector("#decrease");
+      decreaseButton.addEventListener("click", clickEvent);
+
+      counterDOM.innerHTML = counter;
+
+      function clickEvent() {
+        if (this.id == "increase") {
+          counterDOM.innerHTML = counter += 1;
+        } else if (this.id == "decrease") {
+          counterDOM.innerHTML = counter -= 1;
+        }
+      }
+    </script>
+  </body>
+</html>
