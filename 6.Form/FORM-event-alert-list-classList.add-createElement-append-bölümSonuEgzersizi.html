@@ -53,7 +53,7 @@
       </div>
     </div>
     <script>
-      //formHandler fonksiyonunun else durumunda çalışan alert aksiyonunu ekliyoruz. body de id si "alert" olan div olusturduk. Buna alertDOM olarak ulastik. bootstrapdan alert aldik ve adini  "alertFunction" icerisine koyduk. Fonksiyonun Else kismina , alertDOM.innerHTML ini "alertFunction()"" yap dedik.
+      //formHandler fonksiyonunun else durumunda çalişan alert aksiyonunu ekliyoruz. body de id si "alert" olan div olusturduk. Buna alertDOM olarak ulastik. bootstrapdan alert aldik ve adini  "alertFunction" icerisine koyduk. Fonksiyonun Else kismina , alertDOM.innerHTML ini "alertFunction()"" yap dedik.
       let alertDOM = document.querySelector("#alert");
 
       const alertFunction = (
@@ -89,13 +89,13 @@
       //addItem ile: Girilen userName ve Score bilgilerinin sayfada liste halinde görülebilmesi icin olusturdugumuz ul icerisinde li elemani create edilir, class'larini verdik, icerisine userName ve Score bilgilerini yazip, listenin sonuna appende ettik;
       function addItem(userName, score) {
         let userListDOM = document.querySelector("#userList"); //Girilen username ve score bilgilerini altta gösterdiğimiz bir listemiz var.
-        let liDOM = document.createElement("li"); //her yeni bilgi e yeni bir li elemanı create ediliyor.
+        let liDOM = document.createElement("li"); //her yeni bilgi e yeni bir li elemani create ediliyor.
         liDOM.classList.add(
           "list-group-item",
           "d-flex",
           "justify-content-around",
           "align-items-start"
-        ); //yeni li elemanına class bilgileri giriliyor.
+        ); //yeni li elemanina class bilgileri giriliyor.
         liDOM.innerHTML = `<div class="fw-bold">User:</div> ${userName}<span class="badge bg-primary rounded-pill">${score}</span> `; //li nin innerHTML bilgileri giriliyor.
         userListDOM.append(liDOM); //artik hazir olan li elemanimizi userList' e append (sonuna ekleme) ediyoruz.
       }
