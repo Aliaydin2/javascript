@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="alert"></div>
+
+    <div class="container mt-5"></div>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <form id="userForm">
+          <div class="mb-3">
+            <label class="form-label" for="userName">Kullanici Adi</label>
+            <input
+              class="form-control"
+              type="text"
+              name="userName"
+              id="userName"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="score">Not Bilgisi</label>
+            <input class="form-control" type="number" name="score" id="score" />
+          </div>
+          <div class="mb-3">
+            <button type="reset" class="btn btn-danger">Sifirla</button>
+            <button type="submit" class="btn btn-success">Gönder</button>
+          </div>
+        </form>
+        <div class="mt-4">
+          <ul class="list-group" id="userList">
+            <!-- <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Baslik</div>
+                `User: ${USER_NAME.value} Score: ${SCORE.value}`
+              </div>
+              <span class="badge bg-primary rounded-pill">14</span> 
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      //formHandler fonksiyonunun else durumunda çalışan alert aksiyonunu ekliyoruz. body de id si "alert" olan div olusturduk. Buna alertDOM olarak ulastik. bootstrapdan alert aldik ve adini  "alertFunction" icerisine koyduk. Fonksiyonun Else kismina , alertDOM.innerHTML ini "alertFunction()"" yap dedik.
+      let alertDOM = document.querySelector("#alert");
+
+      const alertFunction = (
+        title,
+        message,
+        className
+      ) => `<div class="alert alert-${className="warning"} alert-dismissible fade show" role="alert">
+  <strong>${title}</strong> ${message}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`;
+
+      let USER_FORM = document.querySelector("#userForm");
+      USER_FORM.addEventListener("submit", formHandler);
+
+      function formHandler(event) {
+        event.preventDefault();
+        let USER_NAME = document.querySelector("#userName");
+        let SCORE = document.querySelector("#score");
+
+        if (USER_NAME.value && SCORE.value) {
+          addItem(USER_NAME.value, SCORE.value); //bilgileri gönderdikten sonra, inputlari sifirladik.
+          USER_NAME.value = "";
+          SCORE.value = "";
+        } else {
+          alertDOM.innerHTML = alertFunction(
+            "Baslik Bilgisi",
+            "Eksik Bilgi Girdiniz!",
+            "class bilgisi"
+          ); //console.log("Hatali Giris") yerine alert aksiyonunu ekledik.
+        }
+      }
+      //----------------------------
+      //addItem ile: Girilen userName ve Score bilgilerinin sayfada liste halinde görülebilmesi icin olusturdugumuz ul icerisinde li elemani create edilir, class'larini verdik, icerisine userName ve Score bilgilerini yazip, listenin sonuna appende ettik;
+      function addItem(userName, score) {
+        let userListDOM = document.querySelector("#userList"); //Girilen username ve score bilgilerini altta gösterdiğimiz bir listemiz var.
+        let liDOM = document.createElement("li"); //her yeni bilgi e yeni bir li elemanı create ediliyor.
+        liDOM.classList.add(
+          "list-group-item",
+          "d-flex",
+          "justify-content-around",
+          "align-items-start"
+        ); //yeni li elemanına class bilgileri giriliyor.
+        liDOM.innerHTML = `<div class="fw-bold">User:</div> ${userName}<span class="badge bg-primary rounded-pill">${score}</span> `; //li nin innerHTML bilgileri giriliyor.
+        userListDOM.append(liDOM); //artik hazir olan li elemanimizi userList' e append (sonuna ekleme) ediyoruz.
+      }
+
+      //------------------------
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
