@@ -17,7 +17,7 @@
 
     <div class="container mt-5"></div>
     <div class="row">
-      <div class="col-sm-8 offset-sm-2">
+      <div class="col-sm-3 offset-sm-2">
         <form id="userForm">
           <div class="mb-3">
             <label class="form-label" for="userName">Kullanici Adi</label>
@@ -93,7 +93,7 @@
         liDOM.classList.add(
           "list-group-item",
           "d-flex",
-          "justify-content-around",
+          "justify-content-between",
           "align-items-start"
         ); //yeni li elemanina class bilgileri giriliyor.
         liDOM.innerHTML = `<div class="fw-bold">User:</div> ${userName}<span class="badge bg-primary rounded-pill">${score}</span> `; //li nin innerHTML bilgileri giriliyor.
