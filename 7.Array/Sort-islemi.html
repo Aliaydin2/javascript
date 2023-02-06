@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        let nums=[1,32,5,89,42]
+        let sortlama1= nums.sort()
+        console.log(sortlama1)   //(5) [1, 32, 42, 5, 89]
+
+       let sortlama2 = nums.sort(function(a, b){return a - b});
+       console.log(sortlama2)   //(5) [1, 5, 32, 42, 89]
+
+       let sortlama3 = nums.sort(function(a, b){return b-a});
+       console.log(sortlama3)   //(5) [89, 42, 32, 5, 1]
+       console.log(nums[1])
+
+       let sortlama4 = nums.sort((a, b)=>b-a);
+       console.log(sortlama4)       //(5) [89, 42, 32, 5, 1]
+    </script>
+</body>
+</html>
