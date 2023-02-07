@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //----------------.push()---------------------
+      //Dizinin sonuna eleman eklemek----------------
+      let sports = ['basketball', 'football', 'tennis' ];
+      sports.push('baseball');
+      console.log(sports); // basketball, football, tennis, baseball
+
+      //----------------.unshift()---------------------
+      //Dizinin basina eleman eklemek----------------
+      let sportsss = ['basketball', 'football', 'tennis' ];
+      sportsss.unshift('baseball');
+      console.log(sportsss); // baseball, basketball, football, tennis
+
+      //----------------.pop()---------------------
+      //Dizinin sonundaki elemani silmek----------------
+      let sporlar = ['basketball', 'football', 'tennis' ];
+      sporlar.pop();
+      console.log(sporlar); // basketball, football
+
+      //----------------.shift()---------------------
+      //Dizinin basindaki elemani silmek----------------
+      let sporlarrr = ['basketball', 'football', 'tennis' ];
+      let firstItem=sporlarrr.shift();    //  (shift() ve pop() kullanilirken değiskene tanimlanmalari , neyin silindigini görmemize olanak saglar)
+      console.log(sporlarrr);  // football, tennis
+      console.log("silinen ilk eleman:", firstItem)
+      
+      //-------------- .splice(indexNo,kac eleman silinecek, eklenecek eleman ) -----
+
+      let sportS = ['basketball', 'football', 'tennis' ];
+      let silinenSportS= sportS.splice(1,1,'baseball');  //  (1 nolu indeksteki elemanın oldugu yerden 1 eleman sil ve "baseball" u ekle )
+      console.log(sportS); // (3) ['basketball', 'baseball', 'tennis']
+      console.log(silinenSportS)   // ['football'] //  (silerken bir degiskene atayarak yaparsak yeni bir dizi elde etmis oluruz.)
+
+
+      // ---------------------.includes()-----------------
+      let alisverisListem = ["elma", "ekmek", "süt"];
+      let elmaVar = alisverisListem.includes("elma");
+      console.log(elmaVar);   //true
+
+
+      // ---------------------.slice()-------(dizinin tamaminini ya da bir kismini kopyalamaya yarar)-------------
+      let alisverisListem2 = ["elma", "ekmek", "süt"];
+      let yeniAlisverisListem = alisverisListem2.slice(0,2); // "elma"dan başlayıp "süt"e kadar olan elemanları kopyala."süt" dahil değil.
+      console.log(yeniAlisverisListem); //(2) ['elma', 'ekmek']
+      console.log(alisverisListem2);  //(3) ['elma', 'ekmek', 'süt']  (orjinal dizi sabittir. Bu sayede dizinin kopyasini olusturmaya da yarar)
+
+      // ----------------ES6 ile gelen-----[...items]--------------------
+      let alisverisListem3 = ["yumurta","peynir", "elma", "ekmek", "süt"];
+      let copyAlisverisListesi = [...alisverisListem3]
+      console.log(copyAlisverisListesi);  //(5) ['yumurta', 'peynir', 'elma', 'ekmek', 'süt']
+      console.log(alisverisListem3);  // (5) ['yumurta', 'peynir', 'elma', 'ekmek', 'süt']
+
+      // ---------ES6 ile gelen-----[...items]---ile 2 diziyi birlestirme-------------
+      let alinacaklar1 = ["yumurta","peynir","maydonoz"]
+      let alinacaklar2 = ["elma", "ekmek", "süt"];
+      let tümAlinacaklar = [...alinacaklar1, ...alinacaklar2]
+      console.log(tümAlinacaklar);  //  (6) ['yumurta', 'peynir', 'maydonoz', 'elma', 'ekmek', 'süt']
+
+
+      //----------------------.concat()-----ile 2 diziyi birlestirme--------------
+      let yiyecekler = ["pasta", "baklava", "puding"];
+      let icecekler = ["su", "kahve"];
+      let menu = yiyecekler.concat(icecekler);
+      console.log(menu);  // (5) ['pasta', 'baklava', 'puding', 'su', 'kahve']
+
+
+      //-----------------------diziyi string'e cevirmek---------------- 
+      //-------------------------.toString()-------------------
+      let diziElemanlarim=["Ayse", "Fatma"]
+      console.log(diziElemanlarim.toString());  //  Ayse,Fatma
+
+      //-----------------------diziyi string'e cevirmek---------------- 
+      //-------------------------.join(parametreyle)-------------------
+      let diziElemanlarim2=["Ayse", "Fatma"]
+      console.log(diziElemanlarim2.join("-x-")); //Ayse-x-Fatma
+
+
+
+      //-------------- sort -------(düzenlemek-siralamak)------------------
+      let nums=[1,32,5,89,42]
+      let sortlama1= nums.sort()
+      console.log(sortlama1)   //(5) [1, 32, 42, 5, 89]
+
+      let sortlama2 = nums.sort(function(a, b){return a - b});
+      console.log(sortlama2)   //(5) [1, 5, 32, 42, 89]
+
+      let sortlama3 = nums.sort(function(a, b){return b-a});
+      console.log(sortlama3)   //(5) [89, 42, 32, 5, 1]
+      console.log(nums[1])
+
+      let sortlama4 = nums.sort((a, b)=>b-a);
+      console.log(sortlama4)       //(5) [89, 42, 32, 5, 1]
+
+
+       //----------------.forEach(function(){      })--------------
+      let malzemeler = ["yumurta", "un", "süt"];
+      malzemeler.forEach(function (malzeme, malzemeIndeksi) {
+        console.log(malzeme, malzemeIndeksi);
+      });
+        // yumurta 0
+        // un 1
+        // süt 2
+        
+        malzemeler.forEach(function (malzeme, malzemeIndeksi, dizininkendisi) {
+        console.log(malzeme, malzemeIndeksi, dizininkendisi);
+      });
+        // yumurta 0 (3) ['yumurta', 'un', 'süt']
+        // un 1 (3) ['yumurta', 'un', 'süt']
+        // süt 2 (3) ['yumurta', 'un', 'süt']
+
+        
+        // ------------------array.map(function(){      })--------------
+        let sayilarMap=[1,2,3]
+        let sayilarin5kati=sayilarMap.map(function(sayi){
+            return sayi*5
+        });
+        console.log(sayilarin5kati) //(3) [5, 10, 15]
+
+       
+        // ------------------------.some(function(){      })--------------
+        let sayilarSome = [4,5,6];
+        let sonuc1 = sayilarSome.some(function(sayi) {
+            return sayi > 5 ;   
+        });
+        console.log(sonuc1);    //true  //5 (sayisindan büyük 6 var)
+
+        let sonuc2 = sayilarSome.some(function(sayi) {
+        return sayi <3;
+        });
+        console.log(sonuc2);    //false (3 den küçük herhangi sayi yok)
+        
+
+        // ----------------------.filter(function(){      })--------------
+        let sayilarFilter = [1,2,3,4,5];
+
+        let filtrelenmisSayilar = sayilarFilter.filter(function(sayi) {
+        return sayi >3;
+            });
+
+        console.log(filtrelenmisSayilar);       //  (2) [4, 5]
+        console.log(sayilarFilter)      //  (5) [1, 2, 3, 4, 5] (orjinal dizi değismemistir)
+
+        
+        //-----------------------------.find(function(){      })--------------
+        let sayilarFind = [4,5,6,7];
+
+        let bulunacakEleman1 = sayilarFind.find(function(sayi) {
+        return sayi >5;
+        });
+            console.log(bulunacakEleman1);  // 6 (6 ve 7 olmasina ragmen buldugu ilk elemani döner)
+
+        // ---------------------------------------
+
+
+    </script>
+  </body>
+</html>
