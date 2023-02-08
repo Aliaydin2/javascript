@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 >
+      <ul id="userList">USER LIST</ul>
+    </h2>
+    <script>
+      // -------------------break & continue -----------------------
+      // for döngüsünde break kullanildiktan sonra döngü sonlanir,
+      // continue da ise kosulu saglayan durumda fonksiyon pas gecilir.
+
+      for (let i = 0; i < 10; i++) {
+        if (i == 5) { break;   }    //donguyu sonlandirir
+        console.log(i);     //  0,1,2,3,4
+      }
+
+      for (let i2 = 0; i2 < 10; i2++) {
+        if (i2 == 5) { continue;   }    // donguyu pas gecer
+        console.log(i2);     //  0,1,2,3,4,6,7,8,9
+      }
+
+      //------------------------------------------------
+      let myArray = ["Ahmet","Ali","Ayse","Mehmet","Yasin","Mustafa",]
+      let userListDOM = document.querySelector("#userList")
+
+      for(let i3=0;i3<myArray.length;i3++ ){
+        if(myArray[i3]=="Ayse"){continue}
+        let liDOM = document.createElement("li")
+        liDOM.innerHTML=myArray[i3];
+        userListDOM.append(liDOM)
+      }
+      //for döngüsünde her döngü icin bir li elementi create ettik, ve icerigine myArray in sirali elemanini ekledik ve <h2> taginde bulunan <ul> icerisine append ettik. ancak listedeki "Ayse" geldiginde continue dedik ve sadece o dönguyu pas gectik. 
+    </script>
+  </body>
+</html>
