@@ -42,3 +42,6 @@ PATİKA - javascript lessons
 ## 7-Array
 ### 1.Array-Komutlari-ornekleri
 ### AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem
+
+## 8-Döngüler LOOPS
+### 1.for döngüsü kullanimi
