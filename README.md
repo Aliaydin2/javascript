@@ -44,5 +44,6 @@ PATİKA - javascript lessons
 ### AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem
 
 ## 8-Döngüler LOOPS
-### 1.for döngüsü kullanimi
+### 1.for-döngüsü-kullanimi
 ### 2.break-ve-continue-kullanimi
+### 3.while-dongusu-kullanimi 
