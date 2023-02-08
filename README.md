@@ -45,3 +45,4 @@ PATİKA - javascript lessons
 
 ## 8-Döngüler LOOPS
 ### 1.for döngüsü kullanimi
+### 2.break-ve-continue-kullanimi
