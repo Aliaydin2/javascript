@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 >
+        <ul id="userList">USER LIST</ul>
+    </h2>
+
+    <script>
+        let products=["laptop", "phone", "speaker"]
+
+        products.forEach((product,index,array) => array[index]=product+" 11")
+        console.log(products)
+
+        products.forEach((product,index,array) => array[index]=`${product.toUpperCase()}`)
+        console.log(products)
+
+    // -------------------------------
+
+      let userListDOM = document.querySelector("#userList")
+
+       //for cesitli islemler dondurmemizi sagliyor
+      for(let i=0;i<products.length;i++ ){             
+        let liDOM = document.createElement("li")
+        liDOM.innerHTML="for: "+products[i];
+        userListDOM.append(liDOM)
+      }
+
+      //forEach ise dizilerin icerikleriyle oynamamızı ve islem yapmamizi sagliyor.
+      products.forEach(item=>{ 
+        let liDOM2 = document.createElement("li")
+        liDOM2.innerHTML="forEach: "+ item;
+        userListDOM.append(liDOM2)
+      })
+
+    </script>
+</body>
+</html>

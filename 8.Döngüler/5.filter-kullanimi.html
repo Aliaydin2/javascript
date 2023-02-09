@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let products = ["mic", "cable", "speaker", "server"]
+      let NEW_PRODUCTS= products.filter(item=>item.length>5)
+      console.log(NEW_PRODUCTS)
+
+      const USERS=[
+          {userName:"AliAYDIN", isActive:true},
+          {userName:"Ahmet AAA", isActive:false},
+          {userName:"Ayşe BBB", isActive:true},
+          {userName:"Fatma CCC", isActive:false}
+      ]
+
+      const activeUSERS=USERS.filter(user=>user.isActive)
+      console.log(activeUSERS)  // ( ==true ) demeye gerek yoktur, zaten boolean yapida true olani verecektir.
+      
+      const disactiveUSERS=USERS.filter(user=>user.isActive==false)
+      console.log(disactiveUSERS) // ( ==false ) demeye gerek vardir, 
+
+    </script>
+  </body>
+</html>

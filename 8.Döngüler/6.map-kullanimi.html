@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const USERS=["AYSE", "MehMet", "TugCE", "AkSEL"]
+        
+        const NEW_USERS=USERS.map(item => item.toLowerCase() )
+        console.log(NEW_USERS)
+
+
+            // {userName:"AYSE", shortName:"A.", newName:"Ayse"} objesini saglamaya  calisalim;
+        const USER_OBJ=USERS.map(item=>{
+            return {userName:item.toUpperCase(), shortName:`${item[0]}.`, newName:`${item[0].toUpperCase()}${item.slice(1).toLowerCase()} `}
+                })
+            // object  ya süslü parantez içerisinde return ile yazilacak
+                console.log(USER_OBJ)
+                
+                
+        const USER_OBJ2=USERS.map(item=>(
+                    {userName:item.toUpperCase(), shortName:`${item[0]}.`, newName:`${item[0].toUpperCase()}${item.slice(1).toLowerCase()} `}
+                ))
+             // object  ya da ()icerisinde yazilacak
+                console.log(USER_OBJ2)  
+    </script>
+
+</body>
+</html>

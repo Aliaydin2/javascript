@@ -47,3 +47,6 @@ PATİKA - javascript lessons
 ### 1.for-döngüsü-kullanimi
 ### 2.break-ve-continue-kullanimi
 ### 3.while-dongusu-kullanimi 
+### 4.forEach-dongusu-kullanimi
+### 5.filter-kullanimi
+### 6.forEach-dongusu-kullanimi
