@@ -19,8 +19,8 @@ const newElement=()=>{
             list_DOM.appendChild(liDOM)
             taskDOM.value=""
             // $(".toast.success").toast("show")   //eklendi
-            let add_DOM =document.querySelector("#add")
-            add_DOM.toast.success.toast("show")
+            let add_DOM =document.querySelector("#add .toast.success")
+            $(add_DOM).toast("show")
 
             }
         }
