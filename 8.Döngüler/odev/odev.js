@@ -18,9 +18,15 @@ const newElement=()=>{
             liDOM.innerHTML=YAPILACAK
             list_DOM.appendChild(liDOM)
             taskDOM.value=""
-            alert("eklendi")
+            // $(".toast.success").toast("show")   //eklendi
+            let add_DOM =document.querySelector("#add")
+            add_DOM.toast.success.toast("show")
+
             }
         }
+const removeElement =()=>{
+
+}
     
 
 
