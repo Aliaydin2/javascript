@@ -21,6 +21,30 @@
       <div style="position: absolute; top: 0; right: 0">
         <div
           id="liveToast"
+          class="toast warning hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="4000"
+        >
+          <div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">Görev Silindi.</div>
+        </div>
+      </div>
+    </div>
+    <div class="mr-1" style="position: relative">
+      <div style="position: absolute; top: 0; right: 0">
+        <div
+          id="liveToast"
           class="toast success hide"
           role="alert"
           aria-live="assertive"
@@ -67,7 +91,7 @@
     </div>
     <div class="container">
       <div class="header">
-        <img
+         <img
           src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
           class="mb-1"
           alt=""
@@ -80,22 +104,7 @@
       </div>
 
       <ul id="list" class="list-group">
-        <li class="list-group-item list-group-item-info">
-          3 Litre Su İç
-          <button onclick="remove()">x</button>
-        </li>
-        <li class="list-group-item list-group-item-info">
-          Ödevleri Yap <button onclick="remove()">x</button>
-        </li>
-        <li class="list-group-item list-group-item-info">
-          En Az 3 Saat Kodlama Yap <button onclick="remove()">x</button>
-        </li>
-        <li class="list-group-item list-group-item-info">
-          Yemek Yap <button onclick="remove()">x</button>
-        </li>
-        <li class="list-group-item list-group-item-info">
-          50 Sayfa Kitap Oku <button onclick="remove()">x</button>
-        </li>
+        <li  class="list-group-item list-group-item-info d-flex justify-content-between">eve gitmek<button onclick="remove(this)" >x</button></li>
       </ul>
 
       <script
