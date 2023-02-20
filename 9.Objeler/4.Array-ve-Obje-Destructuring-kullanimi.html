@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ASAGIDAKI ISLEMLER ARRAY LER ICIN DE GECERLIDIR
+        let settings={
+            userName:"Ali", 
+            passWord:"BadPassword", 
+            isActive:true, 
+            serverName:"kodluyoruz", 
+         }
+         
+        //objenin yeni bir obje atamasi ile ;
+        //key isimlerinin degistirilerek ya da degistirilmeyerek yapidan cikartilmasi,
+        //... (üc nokta ile) kalanlarinin herhangi bir isimle ayri bir objeye atanmasi
+        //sadece ... (üc nokta ile) objenin farkli bir kopyasinin olusturulmasi
+         //*********let {key1, key2:reName, ...restkeys} = settings*******
+
+        
+
+         let {userName:userNew, passWord, ...newSettings} = settings
+         
+         //console.log(userName)  undefined hatasi veriyor, cünkü userNew yaptik
+         console.log(settings)  //{userName: 'Ali', passWord: 'BadPassword', isActive: true, serverName: 'kodluyoruz'}
+         console.log(newSettings)   //{isActive: true, serverName: 'kodluyoruz'}
+         console.log(userNew)   //Ali
+         console.log(passWord)  //BadPassword
+
+
+         //**************KOPYALAMA YAPILMAYAN ORNEK
+         let settings2=settings //bu sekilde farkli bir kopyalama yapilmis olmuyor. Aynı obje üzerinde dgisiklik yapilmis oluyor.
+         settings2.userName="baskaisim"
+         console.log(settings2) //{userName: 'baskaisim', passWord: 'BadPassword', isActive: true, serverName: 'kodluyoruz'}
+         console.log(settings)  //{userName: 'baskaisim', passWord: 'BadPassword', isActive: true, serverName: 'kodluyoruz'}
+
+
+         //**************FARKLI KULLANIM OZEL ORNEK
+         const toplama = ({ sayi1, sayi2, ...args }) => {
+        let sonuc = sayi1 + sayi2;
+        for (let sayi in args){ sonuc += args[sayi];}
+        return sonuc;
+        }
+        const sayilar = {
+        sayi1: 8,
+        sayi2: 4,
+        sayi3: 7,
+        sayi4: 9,
+        sayi5: 11
+        }
+        console.log(toplama(sayilar));      //39
+
+        //*************ornek
+        let person={name:"Selin",city:"Ankara",favoriteColor:"aqua blue"}; 
+        let {name:foo}=person;  //person un key1 inin valuesini foo ya atadik gibi oluyor
+        console.log(foo)        //Selin
+        console.log(person.name)    //Selin
+        console.log(person) //{name: 'Selin', city: 'Ankara', favoriteColor: 'aqua blue'}
+
+    </script>
+</body>
+</html>

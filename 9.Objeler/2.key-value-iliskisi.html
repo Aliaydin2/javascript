@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let laptop1 = {
+            brand:"Apple", 
+            model:"MacBook Pro", 
+            "2kg":2,    //rakamla baslayan key ifadelerde tırnak icerisinde kullanmak gerekiyor.
+            "model name":"MacBook Pro", //bosluk ile birden fazla kelime iceren property name kullanilabilir.
+            modelName:"MacBook Pro", //Camel Case de yazmak mantikli
+            model_name:"MacBook Pro", //Böyle de yazilabilir            
+        }
+
+        //value ye ulasabilmek icin object[" "] ya da object.key kullanilir.
+        console.log(laptop1["model name"])
+        console.log(laptop1)
+        console.log(laptop1.brand)      //Apple
+        console.log(laptop1.model)      //MacBook Pro
+        console.log(laptop1["model name"])  //MacBook Pro
+        console.log(laptop1.modelName)      //MacBook Pro
+        console.log(laptop1.model_name)     //MacBook Pro
+        console.log(laptop1["2kg"])     //2
+        console.log(laptop1["brand"])   //Apple     
+        
+        
+        laptop1.brand="Mac"         //value si degistirilebilir
+        console.log(laptop1.brand)      //Mac
+        laptop1.version="10.15.7"       //value eklenebilir.
+        console.log(laptop1.version)        //10.15.7
+
+        //*************Obje metodlari - Istenilen degerlerle yeni dizi oluşturuyorlar **************
+        console.log(Object.keys(laptop1))   //Key’lerden oluşan bir ARRAY döner(return).
+        console.log(Object.values(laptop1)) //Value’lardan oluşan bir ARRAY döner.
+        console.log(Object.entries(laptop1))    //[key, value] çiftlerinden oluşan bir ARRAY döner. 
+
+        let keys = Object.keys(laptop1)     //laptop1 in keys lerini dizide topladık, ardından herbir key icin ayrı ayrı console a yazdirdik.
+        keys.forEach(item => {
+            console.log(item)            
+        });
+
+        let values = Object.values(laptop1)     //laptop1 in value lerini dizide topladık, ardından herbir value icin ayrı ayrı console a yazdirdik.
+        values.forEach(item => {
+            console.log(item)            
+        });
+        
+
+
+    </script>
+</body>
+</html>

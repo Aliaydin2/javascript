@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bir özellik eğer bir fonksiyonu işaret ediyorsa bu özelliğe metot denir.
+        let user1 = {
+            firstName:"Ali", 
+            lastName:"AYDIN", 
+            score:[1, 2, 3, 4], 
+            isActive:true, 
+            shortName: function() {
+                return `${this.firstName[0].toUpperCase()}. ${this.lastName} `
+            }
+        }
+
+        //Arrow Function larda "this" kullanilmadigini unutmayalim . 
+        //this. yerine user1. denilerek arrow function da yazilabilir.
+
+        //****** user1 de objenin icerigini goruyoruz. shortName ile fonksiyonun ne olduguna bakiyoruz, shortName() ile calistirip sonucu elde ediyoruz.
+
+        console.log(user1)      //{firstName: 'Ali', lastName: 'AYDIN', score: Array(4), isActive: true, shortName: ƒ}
+        console.log(user1.shortName)    //ƒ () {return `${this.firstName[0].toUpperCase()}. ${this.lastName} `}
+        user1.shortName()   //'A. AYDIN '
+
+
+
+        //********************* prototype kavrami***********
+        //Prototype, siniflara JavaScript tarafindan otomatik olarak eklenen bir objedir. Eklenmek burada çok doğru bir tabir değil. Aslinda bütün objeler tarafindan miras alinan bir özelliktir. Bu özelliği de "proto" key'i ile ekler.
+
+        //Ornek function;
+        function Insan(isim,yas) {
+        this.isim = isim;
+        this.yas = yas;
+            }
+
+        // Sinifa prototype yardimiyla fonksiyon eklemek (Her Insan icerisine ekliyor)
+        Insan.prototype.yeniFonksiyon = () => {console.log("Merhaba Kodluyoruz")}
+        const ayse = new Insan("ayşe",22);
+        ayse.yeniFonksiyon();       // Output : "Merhaba Kodluyoruz"
+            console.log(ayse)       //Insan {isim: 'ayşe', yas: 22} 
+            //Fonksiyon ayse icerisinde gozukmuyor ancak calistirildiginda herhangi bir sorun olusmuyor.
+
+        //Objeye prototype yardimiyla fonksiyon eklemek (Ayse icerisine ekliyor):
+        ayse.__proto__.enYeniFonksiyon = () => {console.log("Tekrar Merhaba Kodluyoruz!")}
+        ayse.enYeniFonksiyon();     // Output : "Tekrar Merhaba Kodluyoruz!"
+        console.log(ayse)   //Insan {isim: 'ayşe', yas: 22}
+        //Fonksiyon ayse icerisinde gozukmuyor ancak calistirildiginda herhangi bir sorun olusmuyor.
+
+
+
+
+    </script>
+</body>
+</html>
