@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+
+    <script>
+      const s = Number(1234);
+
+      try {
+        if (typeof(s) == "number") throw `s.split is not a function `;
+        let newS = s.split("");
+        newS.reverse();
+        let returnS = newS.join("");
+        console.log(returnS);
+      } catch (err) {
+        console.log(`${err}`);
+        console.log(`${s}`);
+      }
+    </script>
+  </body>
+</html>
