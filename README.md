@@ -22,7 +22,7 @@ PATİKA - javascript lessons
 ### 4. Ternary-Operator-shortif
 ### 5. not-sistemi-kosullu-ifadeler-class-ekleme-denemesi
 ### 6.Javascript-saat-ve-karsilama-ödevi
-## PROJEE-Saat-ve-karsilama-ödevi
+### PROJEE-Saat-ve-karsilama-ödevi
 
 
 ## A-4-Fonksiyonlar
@@ -32,7 +32,7 @@ PATİKA - javascript lessons
 ### 2.2.Fonksiyona-parametre-eklemek-ve-geridönüş(return)-eklemek
 ### 3.ArrowFunctions-FatArrow-kullanimi
 ### 4.DOMEvents
-## PROJE-2Farklı-counter
+### PROJE-2Farklı-counter
 
 
 ## A-5-LocalStorageKullanımı
@@ -46,11 +46,11 @@ PATİKA - javascript lessons
 
 ## A-7-Array
 ### 1.Array-Komutlari-ornekleri
-## AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem
+### AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem
 
 
 ## A-8-Döngüler LOOPS
-## ODEV-TODO
+### ODEV-TODO
 ### 1.for-döngüsü-kullanimi
 ### 2.break-ve-continue-kullanimi
 ### 3.while-dongusu-kullanimi 
@@ -60,7 +60,7 @@ PATİKA - javascript lessons
 
 
 ## A-9-Objeler
-## ODEV-asiankitchen
+### ODEV-asiankitchen
 ### 1.obje-olusturma
 ### 2.key-value-iliskisi
 ### 3.Metot-ekleme-ve-prototype-kavrami
