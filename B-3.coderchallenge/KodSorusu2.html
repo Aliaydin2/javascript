@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // str veriliyor ve her harfin alfabedeki bir sonraki harfi ile degistirilmesi isteniyor. Bunlarin icerisinden sesli olan harflerin de buyuk yazilmasini isteniyor. Sonucu array olarak talep ediyor.
+      let str = "ali aydin";
+      let newSTR = str.split("");
+      console.log(newSTR);
+      const array=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+      let returnSTR = newSTR.map(
+        (item) => (item = array[array.indexOf(item) + 1])
+      );
+
+      const unlu = ["a", "e", "i", "o", "u"];
+      let sonStr = returnSTR.map((item) => {
+        if (unlu.includes(item)) {
+          return item.toUpperCase(item);
+        } else {
+          return item;
+        }
+      });
+
+      console.log(sonStr);
+    </script>
+  </body>
+</html>

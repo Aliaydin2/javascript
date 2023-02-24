@@ -10,10 +10,11 @@
     <h1></h1>
 
     <script>
-      const s = Number(1234);
-
+      // istenilen durum s in ters string olarak yazilmasi ve yine string olmasi.
+      //ancak hata olmasi durumunda (ornegin string degil number verildigi bir durumda ) uyarinin yanlizca "s.split is not a function" ve "1234" (string in kendisi) yazilmasi isteniyor.
+      let s = 1234; //su an number halinde
       try {
-        if (typeof(s) == "number") throw `s.split is not a function `;
+        if (typeof s == "number") throw `s.split is not a function `;
         let newS = s.split("");
         newS.reverse();
         let returnS = newS.join("");
@@ -21,6 +22,8 @@
       } catch (err) {
         console.log(`${err}`);
         console.log(`${s}`);
+      } finally {
+        document.write("ALİ AYDIN"); //try tamamlandıktan sonra hata olsada olmasada çalışacak olan kodlar.
       }
     </script>
   </body>

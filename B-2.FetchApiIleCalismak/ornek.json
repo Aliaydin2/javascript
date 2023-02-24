@@ -1,0 +1,25 @@
+
+ [
+    {
+        "userName":"fakeUser1",
+        "password":1234,
+        "isActive":true,
+        "IDs":[1, 2, 3],
+        "hobbys":{
+            "hobby1":"yüzmek",
+            "hobby2":"kosmak"
+        }
+    },
+    {
+        "userName":"fakeUser2",
+        "password":1234,
+        "isActive":true,
+        "IDs":[1, 2, 3],
+        "hobbys":{
+            "hobby1":"yüzmek",
+            "hobby2":"kosmak"
+        }
+    }
+]
+
+
