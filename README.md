@@ -7,6 +7,7 @@ PATİKA - javascript lessons
 ### 3. Template Literals `backtick` Kullanimi
 ### 4. String Islemleri
 
+
 ##  A-2-DOM
 ### 1. DOM
 ### 2. prompt()
@@ -23,6 +24,7 @@ PATİKA - javascript lessons
 ### 6.Javascript-saat-ve-karsilama-ödevi
 ## PROJEE-Saat-ve-karsilama-ödevi
 
+
 ## A-4-Fonksiyonlar
 ### 1.Fonksiyon nedir
 ### 1.1.Coklu-Fonksiyondan -Fonksiyon-Secmeyi-Saglayan-FonksiyonOrnegi
@@ -32,16 +34,20 @@ PATİKA - javascript lessons
 ### 4.DOMEvents
 ## PROJE-2Farklı-counter
 
+
 ## A-5-LocalStorageKullanımı
 ### 1.LocalStorageKullanimi-counter
+
 
 ## A-6-Form
 ### 1.Form-ders-aciklamasi-örnegi
 ### 2.Form-event-alert-list-classList-add-createElement-append-bölümSonuEgzersizi
 
+
 ## A-7-Array
 ### 1.Array-Komutlari-ornekleri
 ## AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem
+
 
 ## A-8-Döngüler LOOPS
 ## ODEV-TODO
@@ -52,6 +58,7 @@ PATİKA - javascript lessons
 ### 5.filter-kullanimi
 ### 6.map-dongusu-kullanimi
 
+
 ## A-9-Objeler
 ## ODEV-asiankitchen
 ### 1.obje-olusturma
@@ -59,12 +66,15 @@ PATİKA - javascript lessons
 ### 3.Metot-ekleme-ve-prototype-kavrami
 ### 4.Array-ve-Obje-Destructuring-kullanimi
 
+
 ## B-10.Hata-yonetimi
 ### hackerrank-try-catch-throw
+
 
 ## B-11.FetchApiIleCalismak
 ### 1.FetchKullanimi
 ### ornek (JSON dosyası)
+
 
 ## B-12.coderchallenge
 ### 2 Basit_Soru
