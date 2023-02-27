@@ -5,14 +5,14 @@ PATİKA - javascript lessons
 ### 1. Number,parseInt,parseFloat,typeof,toString
 ### 2. boolean
 ### 3. Template Literals `backtick` Kullanimi
-### 4. String Islemleri
+### 4. String Islemleri  
 
 
 ##  A-2-DOM
 ### 1. DOM
 ### 2. prompt()
 ### 3. Liste ögesine erişmek, değistirmek ve eklemek
-### 4. DOMa CSS class i eklemek ve silmek
+### 4. DOMa CSS class i eklemek ve silmek  
 
 
 ##  A-3-KararYapıları-Koşullar
@@ -22,7 +22,7 @@ PATİKA - javascript lessons
 ### 4. Ternary-Operator-shortif
 ### 5. not-sistemi-kosullu-ifadeler-class-ekleme-denemesi
 ### 6.Javascript-saat-ve-karsilama-ödevi
-### PROJEE-Saat-ve-karsilama-ödevi
+### PROJEE-Saat-ve-karsilama-ödevi  
 
 
 ## A-4-Fonksiyonlar
@@ -32,21 +32,21 @@ PATİKA - javascript lessons
 ### 2.2.Fonksiyona-parametre-eklemek-ve-geridönüş(return)-eklemek
 ### 3.ArrowFunctions-FatArrow-kullanimi
 ### 4.DOMEvents
-### PROJE-2Farklı-counter
+### PROJE-2Farklı-counter  
 
 
 ## A-5-LocalStorageKullanımı
-### 1.LocalStorageKullanimi-counter
+### 1.LocalStorageKullanimi-counter  
 
 
 ## A-6-Form
 ### 1.Form-ders-aciklamasi-örnegi
-### 2.Form-event-alert-list-classList-add-createElement-append-bölümSonuEgzersizi
+### 2.Form-event-alert-list-classList-add-createElement-append-bölümSonuEgzersizi  
 
 
 ## A-7-Array
 ### 1.Array-Komutlari-ornekleri
-### AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem
+### AmelelikOrnegi-BüyükSayiBulmaAmeleYöntem  
 
 
 ## A-8-Döngüler LOOPS
@@ -56,7 +56,7 @@ PATİKA - javascript lessons
 ### 3.while-dongusu-kullanimi 
 ### 4.forEach-dongusu-kullanimi
 ### 5.filter-kullanimi
-### 6.map-dongusu-kullanimi
+### 6.map-dongusu-kullanimi  
 
 
 ## A-9-Objeler
@@ -64,16 +64,15 @@ PATİKA - javascript lessons
 ### 1.obje-olusturma
 ### 2.key-value-iliskisi
 ### 3.Metot-ekleme-ve-prototype-kavrami
-### 4.Array-ve-Obje-Destructuring-kullanimi
-
+### 4.Array-ve-Obje-Destructuring-kullanimi  
 
 ## B-10.Hata-yonetimi
-### hackerrank-try-catch-throw
+### hackerrank-try-catch-throw  
 
 
 ## B-11.FetchApiIleCalismak
 ### 1.FetchKullanimi
-### ornek (JSON dosyası)
+### ornek (JSON dosyası)  
 
 
 ## B-12.coderchallenge
